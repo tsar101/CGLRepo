@@ -51,6 +51,7 @@ public class AppTier1 {
     			+ ".*)"); 
         try {
             pdDoc = PDDocument.load(file);
+            System.out.println("USE CGL_Tier1Result;");
             //System.out.println(pdDoc.getNumberOfPages());
             Splitter splitter = new Splitter();
             splitter.setSplitAtPage(1000);
@@ -59,7 +60,7 @@ public class AppTier1 {
             for(PDDocument iterableList:splitFiles)
             {
             	
-            	System.out.println(iterableList.getNumberOfPages());
+            	//System.out.println(iterableList.getNumberOfPages());
             String contents =   new PDFTextStripper().getText(iterableList);
             
             String[] newLineSeprated = contents.split("\n");
