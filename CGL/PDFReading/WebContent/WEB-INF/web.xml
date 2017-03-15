@@ -4,11 +4,22 @@
   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
   http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
   <display-name>PDFReading</display-name>
+  <context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:applicationContext.xml</param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	
   <servlet>
     <description>JAX-RS Tools Generated - Do not modify</description>
     <servlet-name>PDFReading</servlet-name>
     <servlet-class>
-         com.sun.jersey.spi.container.servlet.ServletContainer
+         com.sun.jersey.spi.spring.container.servlet.SpringServlet
     </servlet-class>
         <init-param>
 		     <param-name>com.sun.jersey.config.property.packages</param-name>
