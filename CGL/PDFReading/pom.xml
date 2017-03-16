@@ -5,7 +5,8 @@
   <groupId>org.animesh</groupId>
   <artifactId>PDFReading</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
+  
 
   <name>PDFReading</name>
   <url>http://maven.apache.org</url>
@@ -104,6 +105,7 @@
   </dependencies>
   <build>
 		<finalName>PDFReading</finalName>
+		
 		<plugins>
 
 			<!-- download source code in Eclipse, best practice -->
@@ -157,6 +159,25 @@
 				  </execution>
 				</executions>
 			</plugin>
+			
+			
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<warSourceDirectory>WebContent</warSourceDirectory>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+		
 
 		</plugins>
 	</build>

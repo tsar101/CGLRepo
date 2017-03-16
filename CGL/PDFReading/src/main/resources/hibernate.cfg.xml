@@ -5,12 +5,13 @@
  <session-factory name="hibernateSessionFactory">
   <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
   <property name="hibernate.connection.password">snap@123</property>
-  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/CGL</property>
+  <property name="hibernate.connection.url">jdbc:mysql://cgl-result-store.cxwtmi9hldfi.us-west-1.rds.amazonaws.com:3306/CGL_Tier1Result</property>
   <property name="hibernate.connection.username">java-user</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
   <property name="hibernate.show_sql">true</property>
   <property name="hibernate.format_sql">true</property>
 <!--   <property name="hibernate.hbm2ddl.auto">create</property> -->
   <mapping class="org.animesh.PDFReading.Model.Tier2Candidate"/>
+  <mapping class="org.animesh.PDFReading.Model.Tier1Candidate"/>
  </session-factory>
 </hibernate-configuration>
